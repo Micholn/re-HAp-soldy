@@ -1,104 +1,135 @@
-## Redux Chat
+# Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
 
----
-### Setup
+<p align="center">
+  <a href="https://creativedesignsguru.com/demo/Nextjs-Boilerplate/"><img src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Next js starter banner"></a>
+</p>
 
-0. `git clone`
-0. Navigate to directory
-0. `npm install`
-0. In two separate Terminal tabs respectively run `npm run api-server` and `webpack -w`
-0. Navigate to http://localhost:8080/
+🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, VSCode, Netlify, PostCSS, Tailwind CSS.
 
-* Server can be stopped using `ctl+c`
-
----
+Clone this project and use it to create your own [Next.js](https://nextjs.org) project. You can check a [Next js templates demo](https://creativedesignsguru.com/demo/Nextjs-Boilerplate/).
 
 ### Features
 
-#### Chat Interface
+Developer experience first:
 
-<img src="docs/chat_interface.png" width="350" />
+- 🔥 [Next.js](https://nextjs.org) for Static Site Generator
+- 🎨 Integrate with [Tailwind CSS](https://tailwindcss.com)
+- 💅 PostCSS for processing Tailwind CSS and integrated to `styled-jsx`
+- 🎉 Type checking [TypeScript](https://www.typescriptlang.org)
+- ✅ Strict Mode for TypeScript and React 17
+- ✏️ Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals and Airbnb configuration)
+- 💡 Absolute Imports
+- 🛠 Code Formatter with [Prettier](https://prettier.io)
+- 🦊 Husky for Git Hooks
+- 🚫 Lint-staged for running linters on Git staged files
+- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript
+- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
+- ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
+- 🌈 Include a FREE minimalist theme
+- 💯 Maximize lighthouse score
 
-#### Chatroom Directory
+Built-in feature from Next.js:
 
-<img src="docs/directory.png" width="190"/>
+- ☕ Minify HTML & CSS
+- 💨 Live reload
+- ✅ Cache busting
 
-#### Login Page
+### Philosophy
 
-<img src="docs/login.png" width="350" />
+- Minimal code
+- SEO-friendly
+- 🚀 Production-ready
 
----
-### Design
+### Nextless.js SaaS Boilerplate
 
-This app was built using **React.js** for view rendering and **Redux.js** for state management
+Build your SaaS product faster with [React SaaS Boilerplate](https://nextlessjs.com).
 
-### State
+[![React SaaS Boilerplate Next.js](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
 
-Arguably the most important design implementation was the state shape:
+### Premium Themes
 
-```js
-{
-  user: "David",
-  rooms: [],
-  currentRoom: {
-    id: 0,
-    name: 'Tea Chats',
-    users: ['Ryan', 'Nick']
-  },
-  messages: [
-    {name: 'Ryan', message: 'ayyyyy'},
-    {name: 'Nick', message: 'lmao'}
-  ]
-}
+| [Green Nextjs Landing Page Template](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/)                                                                                                   | [Purple Saas Nextjs Theme](https://creativedesignsguru.com/landing-purple-modern-react-theme/)                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Green Nextjs Landing Page Template](https://creativedesignsguru.com/assets/images/themes/landing-green-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [![Blue Landing Page Nextjs Theme](https://creativedesignsguru.com/assets/images/themes/landing-blue-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-blue-modern-react-theme/) |
+
+Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
+
+### Requirements
+
+- Node.js and npm
+
+### Getting started
+
+Run the following command on your local environment:
+
+```
+git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
+cd my-project-name
+npm install
 ```
 
-* `user` -- A string identify the current logged in user
-* `rooms` -- An array of room objects with `name` and `id` attributes -- this list is shown in the chatroom directory
-* `currentRoom` -- An object identifying the actively shown chatroom, coupled with `id`, `name`, and `users` attributes
-* `messages` -- An array of message objects containing all messages within the current room
-
-I opted for a flat state to ensure concise Redux reducers and prevent components from unneeded re-rendering. Having concise reducers is extremely important because it will reduce the risk of directly mutating our old state. In order for a Redux reducer to decide if there have been changes in state, it compares the location in memory between the old state and new state. If our code ever directly mutates the old state then our old state and new state's memory location will be the same, forcing the reducer to return the old state by default and cause no change in our components.
-
-### Components
+Then, you can run locally in development mode with live reload:
 
 ```
-Root
-  Login
-  Chat
-    Directory
-      Room
-      User
-    Messages
-      RoomInfo
-      Log
+npm run dev
 ```
 
-* `Login` -- Logs in username and redirects to the Chat component upon username submission
-* `Chat` -- An entry point. onEnter, fetches all needed data from our application API
-* `Directory` -- Renders a list of chatrooms and information about the current user
-* `Room` -- A list of all chatrooms. onClick, allows the user to navigate to other rooms
-* `User` -- Displays user information such as `name` and online duration
-* `Messages` -- The component simply wraps the Log and RoomInfo Components
-* `RoomInfo` -- Displays the name of the current chatroom and a list of users whom have posted a message
+Open http://localhost:3000 with your favorite browser to see your project.
 
----
+```
+.
+├── README.md                # README file
+├── next.config.js           # Next JS configuration
+├── public                   # Public folder
+│   └── assets
+│       └── images           # Image used by default template
+├── src
+│   ├── layout               # Atomic layout components
+│   ├── pages                # Next JS pages
+│   ├── styles               # PostCSS style folder with Tailwind
+│   ├── templates            # Default template
+│   └── utils                # Utility folder
+├── tailwind.config.js       # Tailwind CSS configuration
+└── tsconfig.json            # TypeScript configuration
+```
 
-### Overall Approach
+### Customization
 
-My initial application flow is to log in a user and save the user's name within localStorage. Then, fetch all needed data from my application API before rendering the chat interface. I then built a listener such that every time my application state changes, the appropriate component re-renders. The chat interface provides a UI that allows the user to navigate between chatrooms and post messages within those chatrooms. If a user tries to navigate to the '/chat' route without logging in, they will be redirected back to the index route login page.
+You can easily configure Next js Boilerplate. Please change the following file:
 
-Because I saved the current user's info in the browser's localStorage API, the user can leave the chat interface and upon navigation back to the application's /chat route, the user will still be logged in.
+- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon, you can generate from https://favicon.io/favicon-converter/
+- `src/styles/global.css`: your CSS file using Tailwind CSS
+- `src/utils/AppConfig.ts`: configuration file
+- `src/templates/main.tsx`: default theme
 
-In order to improve readability and testability, I opted to use small, stateless components as much as possible. The components are pure. Passing the same data in, will result in the same data out and because of their small size, these components are easily reusable.
+### Deploy to production
 
-### Future Improvements
+You can see the results locally in production mode with:
 
-[] A proper database would allow all messages, user, and room data to persist even when the application server restarts. (MongoDB, PostgreSQL)
+```
+$ npm run build
+$ npm run start
+```
 
-[] Web sockets - Right now, the user would have to refresh their browser in order to witness any changes to the message log from other users. Implementing a web socket would open up a direct connection between the server and the client. It would listen for specific action changes and dispatch those changes to all current open connections. (Socket.io)
+The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
 
-[] A redirect to the '/chat' route if a user navigates to the index route and is logged in. I will need to implement a logout function that would destroy the user item within localStorage and redirect a user to the login page to ensure the user won't be stuck in a logged in state.
+You can create an optimized production build with:
 
-[] In the apps current setup, all chatroom specific messages are acquired upon entrance. This is a costly maneuver and does not scale well. Large scale chat applications like Slack, can quickly can very quickly reach message counts well over 100,000 and we don't want to have to create an html element for every single message at this scale -- O(n). One solution would be to implement an infinite scroll within the message log. A finite number of messages would be fetched from our database upon initial load. Then, a scroll waypoint location would be identified. Once the scroll rolls past this waypoint location, an action would be dispatched to acquire more messages.
+```
+npm run build-prod
+```
 
-[] Refactor! Some of my few stateful components should and will be be refactored into stateless components by integrating their state into the application state as a whole. I'll then utilize higher-order components to distribute this state. Doing this will further improve the testability and readability of this application.
+Now, your blog is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
+
+### Deploy to Netlify
+
+Clone this repository on own GitHub account and deploy to Netlify:
+
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Boilerplate)
+
+### Deploy to Vercel
+
+Deploy this Next JS Boilerplate on Vercel in one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fixartz%2FNext-js-Boilerplate)
