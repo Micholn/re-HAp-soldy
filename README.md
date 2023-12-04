@@ -136,4 +136,4 @@ Deploy this Next JS Boilerplate on Vercel in one click:
 
 ### VSCode information (optional)
 
-If you are VSCode users, you can have a better integration with VSCode by installing the suggested extension in `.vscode/extension.
+If you are VSCode users, you can have a better integration with VSCod
