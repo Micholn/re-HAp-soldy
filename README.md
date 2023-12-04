@@ -118,4 +118,3 @@ You can create an optimized production build with:
 
 ```
 npm run build-prod
-```
