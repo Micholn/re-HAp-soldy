@@ -129,5 +129,3 @@ Clone this repository on own GitHub account and deploy to Netlify:
 [![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Boilerplate)
 
 ### Deploy to Vercel
-
-Deploy this Next JS Boilerplate on Vercel in one click:
