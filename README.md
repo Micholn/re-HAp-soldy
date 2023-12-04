@@ -126,4 +126,4 @@ Now, your blog is ready to be deployed. All generated files are located at `out`
 
 Clone this repository on own GitHub account and deploy to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.
+[![Netlify Deploy button](https://ww
