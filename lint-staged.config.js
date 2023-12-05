@@ -1,3 +1,3 @@
 module.exports = {
-    "*.{js,jsx}"
+    "*.{js,jsx,ts}"
 }
