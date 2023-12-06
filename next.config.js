@@ -9,6 +9,8 @@ module.exports = withBundleAnalyzer({
     poweredByHeader: false,
     trailingSlash: true,
     basePath: "",
+    //
+    reactStrictMode: true
 })
 
 // /** @type {import('next').NextConfig} */
