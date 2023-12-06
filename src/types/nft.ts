@@ -1,1 +1,2 @@
-import { NftRankType } from "@/components/cards/nft-rank"
+import { NftRankType } from "@/components/cards/nft-rank-into";
+
