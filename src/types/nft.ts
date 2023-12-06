@@ -8,3 +8,7 @@ export type NFTCard = {
     tokens: string;
     price: string;
 };
+
+export interface NFTProps {
+    
+}
