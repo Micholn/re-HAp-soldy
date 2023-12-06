@@ -2,7 +2,7 @@ const { i18n } = require("./next-i18next.config");
 
 /* eslint-disable import/no-extraneous-dependencies */
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-    enabled: 
+    enabled: process.env.ANALYZE
 })
 
 /** @type {import('next').NextConfig} */
