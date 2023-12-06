@@ -1,1 +1,1 @@
-Object.prototype.hasOwnProperty,Object.prototype.toString,Object.defineProperty
+Object.prototype.hasOwnProperty,Object.prototype.toString,Object.defineProperty,
