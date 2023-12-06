@@ -10,5 +10,5 @@ export type NFTCard = {
 };
 
 export interface NFTProps {
-    
+    data: NFTCard;
 }
