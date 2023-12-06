@@ -6,7 +6,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
-    poweredByHeader: false
+    poweredByHeader: false,
+    trailingSlash: true,
 })
 
 // /** @type {import('next').NextConfig} */
