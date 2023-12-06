@@ -4,4 +4,5 @@ export type NFTCard = {
     author: string;
     title: string;
     imgSrc: string;
+    nftRank: NftRankType;
 }
