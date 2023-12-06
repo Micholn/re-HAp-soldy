@@ -6,4 +6,5 @@ export type NFTCard = {
     imgSrc: string;
     nftRank: NftRankType;
     tokens: string;
+    price: string;
 }
